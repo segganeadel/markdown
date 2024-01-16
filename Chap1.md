@@ -80,7 +80,7 @@ propre mémoire locale** et échange de l’information avec les autres processe
 fonctionner quel que soit la topologie du réseau**.
 
   * Chaque processeur n’a qu’une vision partielle du système et doit communiquer avec les autres processeurs afin d’accomplir sa tâche. Ainsi, l’accent est mis sur la méthode collaborative pour résoudre une tache donnée.
-  * 
+
 ![](Chap1/fig2.png)
 
 Figure 2 : Systèmes distribués.

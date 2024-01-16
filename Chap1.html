@@ -1,0 +1,583 @@
+<!DOCTYPE html><html><head>
+      <title>Chap1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\adels\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.11\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<ul>
+<li><a href="#1-d%C3%A9finitions-des-syst%C3%A8mes-distribu%C3%A9s">1. Définitions des systèmes distribués</a></li>
+<li><a href="#2-syst%C3%A8mes-distribu%C3%A9s-vs-parall%C3%A8les">2. Systèmes distribués vs parallèles</a>
+<ul>
+<li><a href="#1-parall%C3%A8les">1. Parallèles</a></li>
+<li><a href="#2-distribu%C3%A9s">2. Distribués</a></li>
+</ul>
+</li>
+<li><a href="#3-taxonomie-des-syst%C3%A8mes-distribu%C3%A9s">3. Taxonomie des systèmes distribués</a>
+<ul>
+<li><a href="#taxonomie-cot%C3%A9-mat%C3%A9riel">Taxonomie coté matériel</a>
+<ul>
+<li><a href="#a-multiprocesseurs-m%C3%A9moire-partag%C3%A9e">A. Multiprocesseurs (mémoire partagée)</a>
+<ul>
+<li><a href="#1-bus">1. Bus</a></li>
+<li><a href="#2-switch">2. Switch</a></li>
+</ul>
+</li>
+<li><a href="#b-multiordinateurs-m%C3%A9moire-locale">B. multiordinateurs (mémoire locale)</a>
+<ul>
+<li><a href="#1-bus-1">1. Bus</a></li>
+<li><a href="#2-switch-1">2. Switch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#taxonomie-cot%C3%A9-systeme-dexploitation">Taxonomie coté systeme d'exploitation</a>
+<ul>
+<li><a href="#1-categories-des-syst%C3%A8mes-dexploitation">1. Categories des systèmes d’exploitation</a>
+<ul>
+<li><a href="#a-les-syst%C3%A8mes-fortement-coupl%C3%A9s">A. Les systèmes fortement couplés</a></li>
+<li><a href="#b-les-syst%C3%A8mes-faiblement-coupl%C3%A9s">B. Les systèmes faiblement couplés</a></li>
+</ul>
+</li>
+<li><a href="#2-types-des-syst%C3%A8mes-dexploitation-distribu%C3%A9s">2. Types des systèmes d’exploitation distribués</a>
+<ul>
+<li><a href="#a-les-syst%C3%A8mes-dexploitation-des-plateformes-multiprocesseurs-mpos">A. Les systèmes d’exploitation des plateformes multiprocesseurs (MPOS)</a></li>
+<li><a href="#b-les-syst%C3%A8mes-dexploitation-multiordinateurs-mcos">B. Les systèmes d’exploitation multiordinateurs (MCOS).</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4-caract%C3%A9ristiques-dun-syst%C3%A8me-distribu%C3%A9">4. Caractéristiques d’un système distribué</a>
+<ul>
+<li><a href="#1-transparence">1. Transparence</a></li>
+<li><a href="#2-prise-en-charge-des-pannes-partielles">2. Prise en charge des pannes partielles</a>
+<ul>
+<li><a href="#21-d%C3%A9tection-des-pannes">2.1. Détection des pannes</a></li>
+</ul>
+</li>
+<li><a href="#3-passage-%C3%A0-l%C3%A9chelle">3. Passage à l’échelle</a></li>
+<li><a href="#4-disponibilit%C3%A9">4. Disponibilité</a></li>
+<li><a href="#5-autonomie">5. Autonomie</a></li>
+<li><a href="#6-la-m%C3%A9moire-r%C3%A9partie">6. La mémoire répartie</a></li>
+<li><a href="#7-echange-de-messages">7. Echange de messages</a></li>
+</ul>
+</li>
+<li><a href="#5-types-des-syst%C3%A8mes-distribu%C3%A9s">5. Types des systèmes distribués</a></li>
+<li><a href="#6-domaines-dapplication-des-syst%C3%A8mes-distribu%C3%A9s">6. Domaines d’application des systèmes distribués</a></li>
+<li><a href="#7-les-avantages-et-les-inconv%C3%A9nients-des-syst%C3%A8mes-distribu%C3%A9s">7. Les avantages et les inconvénients des systèmes distribués</a>
+<ul>
+<li><a href="#1-avantages">1. Avantages</a></li>
+<li><a href="#2-inconv%C3%A9nients">2. Inconvénients</a>
+<ul>
+<li><a href="#1-labsence-dune-horloge-globale">1. L'absence d'une horloge globale</a></li>
+<li><a href="#2-la-lenteur-de-la-communication">2. La lenteur de la communication</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#9-les-probl%C3%A8mes-des-syst%C3%A8mes-distribu%C3%A9s">9. Les Problèmes des systèmes distribués</a>
+<ul>
+<li><a href="#1-h%C3%A9t%C3%A9rog%C3%A9n%C3%A9it%C3%A9">1. Hétérogénéité</a></li>
+<li><a href="#2-concurrence">2. Concurrence</a></li>
+<li><a href="#3-s%C3%A9curit%C3%A9">3. Sécurité</a></li>
+<li><a href="#4-pannes">4. Pannes</a></li>
+<li><a href="#5-absence-des-informations-globales">5. Absence des informations globales</a></li>
+</ul>
+</li>
+<li><a href="#10-quelque-exemple-des-syst%C3%A8mes-distribu%C3%A9s">10. Quelque exemple des systèmes distribués</a>
+<ul>
+<li><a href="#1-syst%C3%A8mes-p2p">1. Systèmes P2P</a></li>
+<li><a href="#2-grilles-informatiques-ou-grid-">2. Grilles informatiques ou grid :</a></li>
+<li><a href="#3-cloud-">3. Cloud :</a></li>
+<li><a href="#4-internet">4 Internet</a></li>
+<li><a href="#5-les-syst%C3%A8mes-mobiles">5 Les systèmes mobiles</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-définitions-des-systèmes-distribués">1. Définitions des systèmes distribués </h1>
+<ul>
+<li>
+<p>Un système distribué est une collection d’ordinateurs indépendants, connectés par<br>
+un d’un réseau, qui apparaissent comme un seul ordinateur pour les utilisateurs<br>
+du système.</p>
+</li>
+<li>
+<p>Les différents éléments du système ne fonctionnent pas indépendamment mais collaborent à une ou plusieurs tâches communes.</p>
+</li>
+<li>
+<p>Une partie au moins de l’état global du système est partagée entre plusieurs éléments pour avoir un système distribué.</p>
+</li>
+</ul>
+<h1 id="2-systèmes-distribués-vs-parallèles">2. Systèmes distribués vs parallèles </h1>
+<h2 id="1-parallèles">1. Parallèles </h2>
+<ul>
+<li>
+<p>Possède un ensemble de processeurs <strong>qui sont proches</strong> (sur la meme machine), tous les processeurs ont accès à une <strong>mémoire commune et<br>
+partagée</strong>. Cette mémoire commune permet d’échanger de l’information entre les processeurs.</p>
+</li>
+<li>
+<p><strong>L’architecture connectant les processeurs est prédéfinie</strong>. La tâche à résoudre peut être découpée et répartie sur les processeurs. <strong>Le<br>
+but est d’exploiter au maximum la puissance de calcul du système</strong></p>
+</li>
+<li>
+<p>il est possible de <strong>choisir l’algorithme (ou une partie)</strong><br>
+qui sera exécuté par chaque processeur.</p>
+</li>
+</ul>
+<p><img src="Chap1/fig1.png" alt=""></p>
+<p>Figure 1 : Systèmes Parallèles.</p>
+<h2 id="2-distribués">2. Distribués </h2>
+<ul>
+<li>
+<p>Possède un ensemble de processeurs <strong>interconnectés par un réseau informatique</strong> comme internet, les processeurs peuvent être <strong>géographiquement éloignés</strong>. Chaque processeur possède <strong>sa<br>
+propre mémoire locale</strong> et échange de l’information avec les autres processeurs à l’aide de<br>
+<strong>messages envoyés</strong> via le réseau les connectant.</p>
+</li>
+<li>
+<p>Dans un système distribué, tous les processeurs exécutent le <strong>même algorithme et celui-ci doit<br>
+fonctionner quel que soit la topologie du réseau</strong>.</p>
+<ul>
+<li>Chaque processeur n’a qu’une vision partielle du système et doit communiquer avec les autres processeurs afin d’accomplir sa tâche. Ainsi, l’accent est mis sur la méthode collaborative pour résoudre une tache donnée.</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p><img src="Chap1/fig2.png" alt=""></p>
+<p>Figure 2 : Systèmes distribués.</p>
+<h1 id="3-taxonomie-des-systèmes-distribués">3. Taxonomie des systèmes distribués </h1>
+<p>Un système distribué peut être représenté par une classification de trois classes.<br>
+Les trois classes ou trois niveaux reflètent la structuration en couche de ce système.</p>
+<ul>
+<li>Materiel.</li>
+<li>Systemes d'exploitation.</li>
+<li>Applications et architecture.</li>
+</ul>
+<p><img src="Chap1/fig3.jpeg" alt=""></p>
+<p>Figure 3 : classification des systèmes distribués</p>
+<h2 id="taxonomie-coté-matériel">Taxonomie coté matériel </h2>
+<p>D’un point de vu matériel, un système distribué physique peut être envisagé comme une<br>
+collection de mémoires et de processeurs interconnectés de telle sorte à pouvoir<br>
+communiquer.</p>
+<p><img src="Chap1/fig4.png" alt=""></p>
+<p>Figure 2. Interconnexion des processeurs et des modules de mémoire</p>
+<h3 id="a-multiprocesseurs-mémoire-partagée">A. Multiprocesseurs (mémoire partagée) </h3>
+<h4 id="1-bus">1. Bus </h4>
+<ul>
+<li>Les processeurs est les modules de mémoire sont connectés à un bus commun, tous les modules de mémoire sont accessibles à n’importe quel processeur. Le bus constitue un goulot d’étranglement qui baisse considérablement les performances. Ce problème peut être réduit par l’utilisation de mémoires caches locales à chaque processeur, mais les caches doivent être maintenus cohérents, ce qui n’est pas une tâche facile.</li>
+</ul>
+<h4 id="2-switch">2. Switch </h4>
+<ul>
+<li>Les processeurs et les modules de mémoire<br>
+sont reliés par un réseau de communication (Multi-stage switch)</li>
+</ul>
+<h3 id="b-multiordinateurs-mémoire-locale">B. multiordinateurs (mémoire locale) </h3>
+<p>Leurs construction plus simple que celle des systèmes multiprocesseurs.</p>
+<h4 id="1-bus-1">1. Bus </h4>
+<ul>
+<li>Construits à partir d’ordinateurs (processeur + mémoire) identiques (on les qualifie de systèmes homogènes).</li>
+<li>Les processeurs sont reliés par un réseau multiaccès partagé (Tel que Fast Ethernet) et communiquent par diffusion de messages. Bien que la bande passante du réseau soit importante (de l’ordre de 100 Mbps), les systèmes ainsi construits ont une invariance à l’échelle limitée (25 à 100 noeuds).</li>
+</ul>
+<h4 id="2-switch-1">2. Switch </h4>
+<ul>
+<li>échangent des messages par routage à travers un réseau<br>
+d’interconnexion pouvant avoir plusieurs topologies, allant des grilles simples aux hypercubes.</li>
+<li>Les architectures en grilles, souvent présentées sur un seul circuit imprimé,<br>
+conviennent pour les problèmes à deux dimensions (traitement d’images, théorie des graphes,<br>
+etc.) Un hypercube est un cube à n-dimensions où chaque nœud (un processeur) est relié à n autres<br>
+nœuds processeurs. Les hypercubes conviennent à la résolution de problèmes spécifiques tels<br>
+que le calcul matriciel.</li>
+<li>Les systèmes basés switchs peuvent avoir des configurations très<br>
+variées allant jusqu’à des superordinateurs massivement parallèles (MPP : Massively Parallel<br>
+Processors) contenant des milliers de processeurs et dont le coût se chiffre en millions de<br>
+dollars.</li>
+<li>Les systèmes multiordinateurs hétérogènes sont les plus utilisés actuellement. Les ordinateurs<br>
+peuvent avoir des structures et des performances nettement différentes et sont reliés par des<br>
+réseaux hétérogènes.</li>
+</ul>
+<p><img src="Chap1/fig5.png" alt=""></p>
+<h2 id="taxonomie-coté-systeme-dexploitation">Taxonomie coté systeme d'exploitation </h2>
+<p>Il existe une relation étroite entre les applications distribuées et les systèmes d’exploitation.</p>
+<ul>
+<li>La mise en œuvre des applications distribuées dépend des systèmes d’exploitation qui gèrent les différentes plateformes matérielles (i.e. les services qu’ils offrent).</li>
+<li>Les systèmes d’exploitation peuvent être distribués (cas du système d’exploitation Chorus de Sun)</li>
+</ul>
+<h3 id="1-categories-des-systèmes-dexploitation">1. Categories des systèmes d’exploitation </h3>
+<p>On peut diviser les systèmes d’exploitation en deux catégories :</p>
+<h4 id="a-les-systèmes-fortement-couplés">A. Les systèmes fortement couplés </h4>
+<ul>
+<li>Le système d’exploitation essaye de maintenir une vue globale unique des ressources qu’il gère.</li>
+<li>Ce type de système à tendance à rendre la répartition physique transparente au niveau des applications.</li>
+</ul>
+<h4 id="b-les-systèmes-faiblement-couplés">B. Les systèmes faiblement couplés </h4>
+<ul>
+<li>Une collection de plateformes ou chacune dispose de son propre système d’exploitation mais ces derniers coopèrent pour rendre leurs services et leurs ressources disponibles les uns aux autres, il s’agit des systèmes d’exploitation réseau.</li>
+</ul>
+<p>Notons qu’il est important de signaler que les systèmes d’exploitation constituent, eux aussi, des applications distribuées. Cependant, contrairement à ces dernières, ils sont implantés directement sur les plateformes matérielles et en dépendent fortement</p>
+<h3 id="2-types-des-systèmes-dexploitation-distribués">2. Types des systèmes d’exploitation distribués </h3>
+<p>On en distingue deux types de systèmes d’exploitation distribués :</p>
+<h4 id="a-les-systèmes-dexploitation-des-plateformes-multiprocesseurs-mpos">A. Les systèmes d’exploitation des plateformes multiprocesseurs (MPOS) </h4>
+<ul>
+<li>Considérés comme des systèmes répartis particuliers les MPOS sont conçu pour supporter les hautes performances en utilisant des processeurs multiples. Un des buts des MPOS est de rendre le nombre des processeurs transparent pour les applications. Dans ces systèmes, les processus communiquent via l’utilisation de données situées dans des emplacements de mémoire partagés. La protection de ces emplacements est faite par des sémaphores ou des moniteurs.</li>
+</ul>
+<h4 id="b-les-systèmes-dexploitation-multiordinateurs-mcos">B. Les systèmes d’exploitation multiordinateurs (MCOS). </h4>
+<ul>
+<li>
+<p>Les MCOS ont une structure totalement différente et complexe par rapport aux MPOS. Ceci est du au fait que les structures de données communes ne peuvent être simplement placées dans une mémoire physique partagée. L’unique moyen de communication et l’envoi de messages.</p>
+</li>
+<li>
+<p>Chaque nœud du réseau possède un système d’exploitation qui permet de gérer les ressources locales : mémoire, processeur, disque, … . De même, chaque nœud possède un module chargé de la communication entre plateformes (envoi et réception de messages).</p>
+</li>
+<li>
+<p>Sur chaque noyau on greffe une couche commune qui implémente une machine virtuelle capable d’exécuter des tâches parallèles et concurrentes. Cette couche peut faire apparaître tout le système d’ordinateurs comme une machine multiprocesseur en implémentant une mémoire partagée. D’autres services sont assignés à cette couche : affecter une tâche à un processeur, masquer les pannes matérielles, assurer la transparence à la localisation et la communication interprocessus.</p>
+</li>
+</ul>
+<p>La programmation des systèmes MCOS est beaucoup plus difficile que la programmation des systèmes MPOS. La raison est que l’utilisation d’une mémoire partagée avec une protection par sémaphores ou moniteurs est plus simple que la manipulation des messages.<br>
+Cette constatation est derrière la solution qui consiste à créer des MCOS en modifiant les MPOS par l’émulation d’une mémoire partagée virtuelle à partir de la mémoire virtuelle de chaque nœud.</p>
+<ul>
+<li>Par exemple, on peut utiliser la pagination et avoir une mémoire répartie partagée basée sur la pagination. Les pages sont alors réparties sur tous les nœuds et on maintient une table globale des pages qui indique l’emplacement des pages sur les nœuds. C’est essentiellement la pagination classique excepté qu’au lieu d’utiliser le disque local, on utilise la mémoire virtuelle distante. Lorsqu’un processeur génère une référence d’une page qui n’est pas présente localement, un déroutement à lieu, le MCOS cherche la page et la ramène dans la mémoire locale au processeur ayant généré la référence, ce dernier pourra alors continuer son exécution.</li>
+</ul>
+<h1 id="4-caractéristiques-dun-système-distribué">4. Caractéristiques d’un système distribué </h1>
+<p>Un système distribué doit assurer plusieurs propriétés pour être considéré comme performant.</p>
+<h2 id="1-transparence">1. Transparence </h2>
+<p>La transparence permet de cacher aux utilisateurs les détails techniques et organisationnels d’un système distribué ou complexe. L’objectif est de pouvoir faire bénéficier aux applications une multitude de services sans avoir besoin de connaître exactement la localisation ou les détails techniques des ressources qui les fournissent. Ceci rend plus simple, le développement des applications, mais aussi leur maintenance évolutive ou corrective. Selon la norme la transparence a plusieurs niveaux :</p>
+<ol>
+<li><strong>Accès</strong> : cacher l’organisation logique des ressources et les moyens d’accès à une ressource.</li>
+<li><strong>Localisation</strong> : l’emplacement d’une ressource du système n’a pas à être connu.</li>
+<li><strong>Migration</strong> : une ressource peut changer d’emplacement sans que cela ne soit aperçu.</li>
+<li><strong>Relocalisation</strong> : cacher le fait qu’une ressource peut changer d’emplacement au moment où elle est utilisée.</li>
+<li><strong>Réplication</strong> : les ressources sont dupliquées, mais les utilisateurs n’ont aucune connaissance de cela.</li>
+<li><strong>Concurrence</strong> : correspond au fait qu’un ensemble de machines indépendantes tentent d’accéder simultanément à une même ressource ou à un ensemble de ressources partagées. Il<br>
+est alors nécessaire de conserver cette ou ces ressources dans un état cohérent. Nous<br>
+étudierons deux mécanismes permettant cela. Nous verrons que le problème de concurrence<br>
+est déjà présent dans les environnements d’exécution locaux à processus légers, ce qui permet<br>
+de le gérer de façon transparente dans un environnement d’exécution distribuée. Nous<br>
+étudierons les contraintes qu’il est alors nécessaire d’imposer pour assurer le respect de la<br>
+cohérence de l’application d’origine</li>
+</ol>
+<h2 id="2-prise-en-charge-des-pannes-partielles">2. Prise en charge des pannes partielles </h2>
+<p>Les pannes dans un système distribué peuvent être de différente nature et affecter divers composants. Une panne peut être :</p>
+<ol>
+<li><strong>Franche</strong> : correspondra généralement à un crash, c’est-à-dire que le processus cessera de répondre à toute requête ou d’émettre des requêtes.</li>
+<li><strong>Transitoire</strong> ou <strong>Intermittente</strong> : au contraire, la panne apparaîtra à un instant donné puis le processus fonctionnera à nouveau correctement.</li>
+<li><strong>Byzantines</strong> : caractérisées par un comportement déviant du<br>
+processus affecté : ce dernier ne respecte plus sa spécification, soit à cause d’une opération malveillante, soit en raison d’une erreur logicielle ou encore à la suite d’une erreur physique non détectée comme une erreur mémoire.</li>
+</ol>
+<p>Quel que soit le type de panne qui apparaisse, une première difficulté consiste à la détecter avant de pouvoir la gérer</p>
+<h3 id="21-détection-des-pannes">2.1. Détection des pannes </h3>
+<p>En général, un mécanisme de détection de panne dans un système distribué décrète un délai –time out – au-delà duquel, si aucune réponse n’a été reçue, le processus est considéré comme étant en panne.</p>
+<ul>
+<li>Dans un système synchrone pour lequel le délai maximum de communication et de traitement d’une requête est connu, ce système détectera les pannes correctement.</li>
+<li>Cependant, dans un système totalement asynchrone et pour lequel les délais de réponse ne sont pas prévisibles, comme c’est le cas pour la plupart des systèmes distribués, cette méthode ne permettra pas de distinguer un processus en panne d’un processus très lent.</li>
+<li>Ce phénomène abouti à l’impossibilité de la résolution de certains problèmes en présence d’une panne, notamment celui du consensus. Dans lequel un ensemble de processus doivent se mettre d’accord sur une valeur commune</li>
+</ul>
+<h2 id="3-passage-à-léchelle">3. Passage à l’échelle </h2>
+<p>Le concept de passage à l’échelle désigne la capacité d’un système à continuer à délivrer avec un temps de réponse constant un service même si le nombre de clients ou de données augmente de manière importante.<br>
+Le passage à l’échelle peut être mesuré avec au moins trois<br>
+dimensions :</p>
+<ol>
+<li>Le nombre d’utilisateurs et/ou de processus (passage à l’échelle en taille).</li>
+<li>La distance maximale physique qui sépare les nœuds ou ressources du système (Passage à l’échelle).</li>
+<li>Le nombre de domaines administratifs (passage à l’échelle administrative)</li>
+</ol>
+<h2 id="4-disponibilité">4. Disponibilité </h2>
+<p>Un système est dit disponible s’il est en mesure de délivrer correctement le ou Les services de manière conforme à sa spécification. Pour rendre un système disponible il faut donc le rendre capable de faire face à tout obstacle qui peut compromettre son bon fonctionnement. En effet, l’indisponibilité d’un système peut être causée par plusieurs sources parmi lesquelles nous pouvons citer : Les pannes qui sont des conditions ou évènements accidentels empêchant le système, ou un de ses composants, de fonctionner de manière conforme à sa spécification. Les surcharges qui sont des sollicitations excessives d’une ressource du système entraînant sa congestion et la dégradation des performances du système</p>
+<h2 id="5-autonomie">5. Autonomie </h2>
+<ul>
+<li>Un système ou un composant est dit autonome si son fonctionnement ou son intégration dans un système existant ne nécessite aucune modification des composants du système hôte.</li>
+<li>L’autonomie des composants d’un système favorise l’adaptabilité, l’extensibilité et la réutilisation des ressources de ce système.</li>
+<li>Par exemple, une ressource autonome peut être remplacée avec une autre ressource plus riche en termes de fonctionnalités, ce qui étend les services du système. La confiance entre les différentes machines d’un système distribué est un élément essentiel.</li>
+</ul>
+<p>Nous ajoutons donc cette caractéristique aux quatre précédentes. Dès lors que l’ensemble des machines participant à un système distribué ne sont pas toutes gérées et administrées par la même organisation, des problèmes de confiance entre ces machines apparaissent. Il est nécessaire de proposer des mécanismes pour gérer cette confiance et assurer une certaine protection en son absence</p>
+<h2 id="6-la-mémoire-répartie">6. La mémoire répartie </h2>
+<ul>
+<li>La mémoire répartie est une caractéristique constitutive des systèmes distribués.</li>
+<li>Chaque machine participant à un système distribué possède sa propre mémoire, son propre espace d’adressage et éventuellement ses propres périphériques de stockage permanents.</li>
+<li>La mémoire de l’ensemble du système est donc répartie dans le sens où une partie des données se trouve sur un site, une autre partie sur un autre et certaines données peuvent éventuellement être dupliquées.</li>
+<li>La prise en charge de cette répartition implique la mise en œuvre de mécanismes de communication pour l’échange de données entre les différents sites.
+<ul>
+<li>Cet échange peut être :</li>
+</ul>
+<ol>
+<li><strong>explicite</strong>, par l’utilisation d’une bibliothèque de communication.</li>
+<li><strong>abstrait</strong> dans la notion d’appel de routine à distance.</li>
+<li><strong>implicite</strong> dans le cas d’une mémoire virtuellement partagée.</li>
+</ol>
+</li>
+</ul>
+<h2 id="7-echange-de-messages">7. Echange de messages </h2>
+<ul>
+<li>L’échange de messages est vraisemblablement la méthode le plus basse niveau, ou en tout cas la plus proche du modèle d’exécution sous-jacent.</li>
+<li>Pour qu’une machine A connaisse une information contenue sur une machine B, cette dernière doit envoyer un message contenant cette information à la machine A.</li>
+<li>Cet envoi de message est explicite au niveau du paradigme de programmation et doit être pris en charge par le développeur</li>
+</ul>
+<h1 id="5-types-des-systèmes-distribués">5. Types des systèmes distribués </h1>
+<ul>
+<li>
+<p>Les systèmes distribués architecturés autour de <strong>systèmes d'exploitation orientés<br>
+réseaux</strong>.</p>
+</li>
+<li>
+<p>Les systèmes distribués reposants sur des <strong>systèmes d'exploitation auxquels sont<br>
+ajoutées des fonctionnalités</strong>.</p>
+<ul>
+<li>Ces systèmes permettent de gérer, de façon plus ou moins évidente, l’hétérogénéité des différents hôtes.</li>
+</ul>
+</li>
+<li>
+<p>Les systèmes distribués reposant sur <strong>système d'exploitation complètement distribué</strong>.</p>
+<ul>
+<li>Dans ce cas, le noyau lui-même possède tous les outils pour prendre sous sa responsabilité la communication inter processus synchrone. Ces systèmes ne gèrent pas directement l’hétérogénéité des différents hôtes.</li>
+</ul>
+</li>
+</ul>
+<h1 id="6-domaines-dapplication-des-systèmes-distribués">6. Domaines d’application des systèmes distribués </h1>
+<ul>
+<li>Ingénierie simultanée</li>
+<li>Coopération d’équipes pour la conception d’un produit</li>
+<li>Production coopérative de documents</li>
+<li>Partage cohérent d’information</li>
+<li>Gestion intégrée des informations d'une entreprise</li>
+<li>Intégration de l’existant</li>
+<li>Contrôle et organisation d’activités en temps réel</li>
+<li>Centres de documentation, bibliothèques</li>
+<li>Recherche, navigation, visualisation multimédia.</li>
+</ul>
+<h1 id="7-les-avantages-et-les-inconvénients-des-systèmes-distribués">7. Les avantages et les inconvénients des systèmes distribués </h1>
+<h2 id="1-avantages">1. Avantages </h2>
+<ol>
+<li>Performance</li>
+<li>Robustesse</li>
+<li>Evoluvité</li>
+<li>Securite</li>
+<li>Acceleration des calculs</li>
+<li>Transparence</li>
+<li>Flexibilité</li>
+<li>Fiabilité</li>
+<li>Communication entre les systemes</li>
+<li>Acces distant</li>
+</ol>
+<h2 id="2-inconvénients">2. Inconvénients </h2>
+<h3 id="1-labsence-dune-horloge-globale">1. L'absence d'une horloge globale </h3>
+<p>chaque nœud possède sa propre horloge pour dater les<br>
+événements qui lui sont locaux. Par conséquent, si les horloges indépendantes de chaque<br>
+nœud ne sont pas parfaitement synchronisées, l'ordre des événements n'est pas déductible à<br>
+partir des datations locales. Cette difficulté conduira à définir des datations logiques qui<br>
+permettent de corriger ce problème.</p>
+<h3 id="2-la-lenteur-de-la-communication">2. La lenteur de la communication </h3>
+<p>Malgré le degré de fiabilité offert par les réseaux de communication, et les vitesses de transmission qu'ils proposent(avec l'arrivée des fibres optiques), les réseaux restent relativement, et on dit bien relativement lents par rapport à la vitesse de calcul sur les machines, ce qui implique un grand temps d'attente dans le cas d'un travail coopératif entre les processus, et donc on obtient une perte concernant la performance du système. La perte des messages : parfois, les réseaux de communication ne sont pas fiables, quelques messages transportés par ces réseaux peuvent être perdus, et donc on doit réémettre ces messages, les protocoles de détection, de perte, et la génération des nouveaux messages reste jusqu' à maintenant un des domaines de recherche dans les systèmes répartis.</p>
+<h1 id="9-les-problèmes-des-systèmes-distribués">9. Les Problèmes des systèmes distribués </h1>
+<p>Dans chaque couche de système distribué, il est possible d'avoir diverses entités reliées par un réseau qui est physique dans la couche matérielle et virtuel dans les couches. Chaque couche matérialise, à elle seule, un système distribué. Cependant, comme les entités de chaque couche s'exécutent en utilisant les services disponibles dans les inférieures, les applications distribuées sont donc mises en œuvre moyennant plusieurs systèmes <a href="http://xn--distribus-i4a.la">distribués.la</a> couche middleware est une couche spécifique pour les systèmes distribués. Qu’est censée cacher les subtilités des couches inférieures et offrir aux concepteurs des applications distribuées des services plus convenables de nature à réduire leur complexité</p>
+<h2 id="1-hétérogénéité">1. Hétérogénéité </h2>
+<p>Les composants d'un système distribués sont appelés à coopérer pour partager les ressources mais chaque composant peut avoir ses spécificités qui limitent ce partage ou le rendent difficile. L'hétérogénéité au niveau matériel vient de la différence qui existe entre les ordinateurs aussi bien qu'entre les réseaux. Dans un même système distribué, il est possible de trouver un ordinateur personnel, une station de travail sophistiquée ou même un ordinateur multiprocesseur puissant.</p>
+<h2 id="2-concurrence">2. Concurrence </h2>
+<p>Le problème de la concurrence se pose pour les systèmes distribués comme pour les systèmes centralisés (i.e. multiprocesseurs).la gestion de la concurrence dans les systèmes distribués nécessite des mécanismes et des outils tout comme les systèmes centralisés(moniteurs, sémaphore).cependant, dans le cas des systèmes distribués, la gestion de la concurrence se base en partie sur la communication par messages et cette dernière introduit d'autres sources de difficultés, telles que la perte de messages ou leur corruption, d'en-t-il faut tenir compte .</p>
+<h2 id="3-sécurité">3. Sécurité </h2>
+<p>Les problèmes de sécurité se posent pour tous les systèmes informatiques. Cependant, dans les systèmes distribués, la vulnérabilité se trouve accentuée par la répartition même. Ainsi, il est naturel dans le commerce électronique qu'une partie de l'application (un client) envoie des messages à un autre (un serveur).malheureusement le message peut être intercepté, lors de sa transmission, et son contenu divulgué, ce qui peut entrainer de conséquences graves aussi bien pour le client que pour le serveur.</p>
+<h2 id="4-pannes">4. Pannes </h2>
+<p>Les pannes peuvent apparaitront aussi dans les différentes couches et se propager éventuellement aux autres couches. L'origine des pannes peut être une raison matérielle ou une raison logique liée à la conception des applications, des middlewares et des systèmes d'exploitation. Certaines peuvent avoir comme origine une faille dans gestion de la concurrence ou la coordination en général. Les pannes d'ordre logiques sont innombrables du fait que les applications distribuées sont par nature même, complexes.</p>
+<h2 id="5-absence-des-informations-globales">5. Absence des informations globales </h2>
+<p>Dans le cas des systèmes distribués, la mémoire commune est inexistante. Chaque processus se trouve dans un environnement différent et son état est une information interne à ce dernier. De même, les informations sur les ressources partagées ne sont pas accessibles en temps <a href="http://xn--rel-bma.de">réel.de</a> ces faits, la coordination d'un ensemble de processus distribués nécessite le recours à la communication par échange de message. Malheureusement, un message parvient toujours à sa destination avec un certain retard et par conséquent l'information qu'il véhicule ne reflète pas toujours l'état d'un processus ou d'une ressource, car ces derniers peuvent changer d'état durant la transmission du message. Il est impossible d'avoir une globale instantanée de l'état d'un système distribué et cette situation rend la coordination dans ces derniers un véritable challenge.</p>
+<h1 id="10-quelque-exemple-des-systèmes-distribués">10. Quelque exemple des systèmes distribués </h1>
+<h2 id="1-systèmes-p2p">1. Systèmes P2P </h2>
+<p>Comme nous l’avons mentionné ci-avant, le terme P2P fait référence à une classe de systèmes<br>
+distribués qui utilisent des ressources distribuées pour réaliser une tâche particulière de<br>
+manière décentralisée. Les ressources sont composées d’entités de calcul (ordinateur ou<br>
+PDA), de stockage de données, d’un réseau de communication, etc. La tâche à exécuter peut<br>
+être du calcul distribué, du partage de données (ou de contenu), de la communication et<br>
+collaboration, d’une plateforme de services, etc. La décentralisation, quant à elle, peut<br>
+s’appliquer soit aux algorithmes, soit aux données, soit aux métadonnées, soit à plusieurs<br>
+d’entre eux. L’une des particularités des systèmes P2P est que tous les nœuds (pairs) sont en<br>
+général symétriques, c’est à dire qu’ils jouent à la fois le rôle de client et de serveur. En<br>
+particulier, les systèmes de partage de fichiers permettent de rendre les objets d’autant plus<br>
+disponibles qu’ils sont populaires, en les répliquant sur un grand nombre de nœuds. Cela<br>
+permet alors de diminuer la charge (en nombre de requêtes) imposée aux noeuds partageant<br>
+les fichiers populaires, ce qui facilite l’augmentation du nombre de clients et donc le passage<br>
+à l’échelle en taille des données. Les pairs sont organisés autour d’une architecture qui peut<br>
+être centralisée ou non. Dans l’architecture centralisée, un nœud joue le rôle de coordinateur<br>
+central (serveur, ou index central) et gère soit les partages, soit la recherche, soit l’insertion<br>
+d’informations et de nouveaux nœuds. Cependant l’échange d’informations entre nœuds se<br>
+passe directement d’un nœud à l’autre. D’aucuns considèrent que de telles architectures ne<br>
+sont pas pair-à-pair, car un serveur central intervient dans le processus. Par contre d’autres<br>
+arguent que ce sont bien des systèmes pair-à-pair, car les fichiers transférés ne passent pas par<br>
+le serveur central. Néanmoins, c’est une solution fragile puisque le serveur central est<br>
+indispensable au réseau. Ainsi, s’il est en panne ou non accessible, tout le réseau s’effondre.<br>
+En plus, le système n’est pas transparent puisque les nœuds ont besoin de savoir à tout<br>
+moment l’emplacement de l’index et sont sensibles à tout changement de celui-ci. Un<br>
+exemple de solution P2P centralisée est Napster (Nap), qui utilise un serveur pour stocker un<br>
+index ou pour initialiser le réseau .<br>
+Pour faire face à ces insuffisances, une architecture distribuée s’impose, puisqu’un noeud<br>
+pourrait solliciter plusieurs serveurs en même temps. Le système est ainsi plus robuste, mais<br>
+la recherche d’informations est plus difficile. Elle peut s’effectuer dans des systèmes<br>
+décentralisés non-structurés, comme Gnutella (Gnu). Dans ce système, la recherche se fait par<br>
+propagation de la requête aux voisins jusqu’à trouver les résultats, ce qui nécessite dès lors un<br>
+nombre de messages élevé, proportionnel au nombre d’utilisateurs du réseau (et exponentiel<br>
+suivant la profondeur de recherche). Dans les systèmes décentralisés structurés, une<br>
+organisation de connexion et de répartition des objets partagés est maintenue entre les nœuds.<br>
+Souvent cette organisation est basée sur les tables de hachage distribuées, permettant de<br>
+réaliser des recherches en un nombre de messages croissant de façon logarithmique avec le<br>
+nombre d’utilisateurs du réseau, comme CAN, Chord, Kademlia, Pastry, etc. Une autre<br>
+solution possible est l’utilisation de « super-pairs », nœuds du réseau choisis en fonction de<br>
+leur puissance de calcul et de leur bande passante, réalisant des fonctions utiles au système<br>
+comme l’indexation des informations et le rôle d’intermédiaire dans les requêtes. Cette<br>
+solution que l’on retrouve dans Kazaa (KaZ), rend le système un peu moins tolérant aux<br>
+pannes que les systèmes complètement décentralisés et englobe un peu l’idée de client-serveur entre pairs et super-pairs. Comme tous les nœuds sont au même niveau avec les<br>
+architectures complètement distribuées, celle-ci offrent plus de transparence dans<br>
+l’organisation et la localisation des ressources que les architectures centralisées ou semi-centralisées (super-pairs). Les systèmes P2P soulèvent plusieurs problèmes bien qu’ils<br>
+facilitent le passage à l’échelle et la disponibilité des ressources avec un faible coût. Il faut<br>
+noter en premier lieu que les nœuds du système sont totalement autonomes et donc qu’ils<br>
+peuvent choisir de partager ou non leur CPU et leur capacité de stockage. Cette autonomie<br>
+leur confère aussi le choix de rejoindre ou quitter le système à tout moment. Cela a pour effet<br>
+de compromettre la capacité de calcul totale et réelle du système, mais aussi la disponibilité<br>
+des ressources (informations, capacité de stockage, etc.). En second lieu, le système de<br>
+communication utilisé est de faible bande passante (en général Internet), ce qui peut créer une<br>
+surcharge du système et une latence plus élevée que dans les clusters. Enfin, l’absence<br>
+d’infrastructures de contrôle sur les systèmes P2P rend ces derniers moins pratiques pour<br>
+prendre en compte certains types d’applications qui exigent une grande qualité ou des services<br>
+transactionnels. Néanmoins, les systèmes P2P sont devenus incontournables aujourd’hui dans<br>
+le domaine du partage de fichiers, de la recherche d’informations et de la collaboration .</p>
+<h2 id="2-grilles-informatiques-ou-grid-">2. Grilles informatiques ou grid : </h2>
+<p>Le terme anglais grid désigne un système distribué d’électricité. Initialement, le concept de<br>
+grille partait du principe d’un tel système : les ressources d’un ordinateur (processeur,<br>
+mémoire, espace disque) étaient mises à la disposition d’un utilisateur aussi facilement que<br>
+l’on branche un appareil électrique à une prise électrique. Une grille informatique est une<br>
+infrastructure virtuelle constituée d’un ensemble de ressources informatiques potentiellement<br>
+partagées, distribuées, hétérogènes, délocalisées et autonomes. Une grille est en effet une<br>
+infrastructure, c’est-à-dire des équipements techniques d’ordre matériel et logiciel. Cette<br>
+infrastructure est qualifiée de virtuelle, car les relations entre les entités qui la composent<br>
+n’existent pas sur le plan matériel, mais d’un point de vue logique. D’un point de vue<br>
+architectural, la grille peut être définie comme un système distribué constitué de l’agrégation<br>
+de ressources réparties sur plusieurs sites et mises à disposition par plusieurs organisations<br>
+différentes. Un site est un lieu géographique regroupant plusieurs ressources informatiques<br>
+administrées de manière autonome et uniforme. Il peut être composé d’un supercalculateur ou<br>
+d’une grappe de machines (cluster). Contrairement aux systèmes P2P, une grille garantit des<br>
+qualités de service non triviales, c’est-à-dire qu’elle répond adéquatement à des exigences<br>
+(accessibilité, disponibilité, fiabilité, ...) compte tenu de la puissance de calcul ou de stockage<br>
+qu’elle peut fournir. Il existe plusieurs projets de grilles qui on été mis en place aussi bien à<br>
+des échelles nationales qu’internationales : la grille expérimentale française Grid’5000, la<br>
+grille de calcul scientifique nord-américain TeraGrid, la grille chinoise CNGrid, la grille Asie-Pacifique ApGrid , etc. Les grilles informatiques sont caractérisées par une forte hétérogénéité<br>
+et une grande dynamicité.<br>
+En effet, les machines d’une grappe sont reliés par un réseau gigabits alors que les sites sont<br>
+liés par un réseau WAN, dont la latence peut aller jusqu’à 100 millisecondes. De là, nous<br>
+pouvons noter une différence importante de la latence entre deux machines d’un même site et<br>
+celle entre deux machines de deux sites. En outre, chaque site est administré de manière<br>
+autonome et par conséquent les politiques de sécurité varient d’un site à l’autre. Un autre<br>
+exemple d’hétérogénéité relève de la composition interne d’un site. Chaque site est libre de<br>
+choisir le type de processeur de ses machines (Intel, AMD, IBM, ...), la capacité de stockage<br>
+et le réseau d’interconnexion entre machines (Gigabit Ethernet, Infiniband, ...). Enfin<br>
+l’infrastructure d’une grille est composée d’un nombre important de sites et de machines qui<br>
+sont susceptibles de tomber en panne à tout moment. À cela s’ajoute le fait que de nouveaux<br>
+sites peuvent être ajoutés ou retirés de la grille sans trop impacter le fonctionnement de la<br>
+grille. De par leur hétérogénéité, leur gestion décentralisée et leur taille, les grilles sont des<br>
+infrastructures très complexes à mettre en oeuvre. La transparence n’est assurée qu’à moitié<br>
+parce qu’ il faut avoir une information précise des ressources dans un site pour pouvoir<br>
+distribuer les tâches convenablement. Cependant à l’intérieur d’un site, la machine qui<br>
+effectue concrètement la tâche n’est pas connue en général .</p>
+<h2 id="3-cloud-">3. Cloud : </h2>
+<p>Le cloud est un concept plus récent dont une définition unanime tarde à voir le<br>
+jour. Cette divergence découle des principes considérés par les chercheurs pour définir le<br>
+cloud. En effet, certains auteurs mettent l’accent sur le passage à l’échelle et la mutualisation<br>
+de l’usage des ressources alors que d’autres privilégient le concept de virtualisation ou le<br>
+business model (collaboration et pay-as-you-go). Cependant, il est unanimement reconnu que<br>
+le cloud permet l’utilisation de la mémoire et des capacités de calcul des ordinateurs et des<br>
+serveurs répartis dans le monde entier et liés par un réseau, tel Internet. Les ressources sont en<br>
+général logées dans des data centres qui sont géographiquement distribués dans l’optique de<br>
+garantir le passage à l’échelle et la disponibilité. Avec le cloud, les utilisateurs ne sont plus<br>
+propriétaires de leurs serveurs informatiques, mais peuvent ainsi accéder de manière évolutive<br>
+à de nombreux services en ligne sans avoir à gérer l’infrastructure sous-jacente, souvent<br>
+complexe. C’est pourquoi, on peut considérer le cloud comme une extension des ASP. Les<br>
+applications et les données ne se trouvent plus sur l’ordinateur local, mais dans un nuage<br>
+(cloud) composé d’un certain nombre de serveurs distants interconnectés au moyen d’une<br>
+excellente bande passante indispensable à la fluidité du système. L’accès au service se fait par<br>
+une application standard facilement disponible, la plupart du temps un navigateur Web. Les<br>
+services offerts par le cloud sont nombreux parmi lesquels nous avons :</p>
+<ul>
+<li>Infrastructure as a service (IaaS) : c’est un service qui donne à l’utilisateur un<br>
+ensemble de ressources de traitement et de stockage dont il a besoin à un instant précis<br>
+pour effectuer ses tâches.</li>
+<li>Platform as a Service (PaaS) : ce service, en dehors de fournir une infrastructure<br>
+virtuelle, assure aussi la plateforme logicielle pour que les applications de l’utilisateur<br>
+puissent tourner.</li>
+<li>Software as a Service (SaaS) : c’est une alternative de toute application locale.</li>
+</ul>
+<p>Un exemple de ce cas est l’utilisation en ligne de la suite bureautique de Microsoft Office.<br>
+Pour assurer ces services qui varient d’un utilisateur à un autre, l’architecture des clouds est<br>
+composée à son niveau le plus basique d’une couche logique composée d’un ensemble de<br>
+machines virtuelles et d’une couche physique composée de data centres. Ainsi, plusieurs<br>
+machines virtuelles peuvent être démarrées dynamiquement sur une seule machine physique<br>
+pour satisfaire les besoins de plusieurs services. Les data centres qui regroupent les machines<br>
+physiques sont en général répartis sur des sites géographiquement distants afin d’assurer une<br>
+haute disponibilité. En plus cette répartition permet aussi d’assurer un niveau de performances<br>
+élevé en branchant un utilisateur sur le site le plus proche de son emplacement afin de réduire<br>
+les délais de communication. La mutualisation du matériel permet d’optimiser les coûts par<br>
+rapport aux systèmes conventionnels et de développer des applications partagées sans avoir<br>
+besoin de posséder ses propres machines dédiées au calcul. Comme pour la virtualisation,<br>
+l’informatique dans le nuage est plus économique grâce à son évolutivité. En effet, le coût est<br>
+fonction de la durée de l’utilisation du service rendu et ne nécessite aucun investissement<br>
+préalable (homme ou machine). Notons également que l’élasticité du nuage permet de fournir<br>
+des services évolutifs et donc de supporter les montées de charges. Par exemple,<br>
+<a href="http://Salesforce.com">Salesforce.com</a>, pionnier dans le domaine de l’informatique dans le nuage gère les données de<br>
+54 000 entreprises, et leurs 1,5 millions d’employés, avec seulement 1000 serveurs (mars<br>
+2009). De plus, les services sont extrêmement fiables, car basés sur des infrastructures<br>
+performantes possédant des politiques efficaces de tolérance aux pannes (notamment des<br>
+répliques). Grâce à ses avantages, on assiste aujourd’hui à une multiplication rapide<br>
+d’entreprises qui proposent des solutions cloud parmi lesquelles figurent : Amazon, IBM,<br>
+Microsoft, Google, etc. Cependant, le problème fondamental reste d’une part la sécurisation<br>
+de l’accès à l’application entre le client et le serveur distant. On peut aussi ajouter le problème<br>
+de sécurité générale du réseau de l’entreprise : sans le cloud computing, une entreprise peut<br>
+mettre une partie de son réseau en local et sans aucune connexion (directe ou indirecte) à<br>
+internet, pour des raisons de haute confidentialité par exemple ; dans le cas du cloud<br>
+computing, elle devra connecter ces postes à internet (directement ou pas) et ainsi les exposer<br>
+à un risque d’attaque ou a des violations de confidentialité.</p>
+<h2 id="4-internet">4 Internet </h2>
+<p>Est une vaste collection de réseaux d’ordinateurs interconnectés. Les programmes qui<br>
+s’exécutent sur ces ordinateurs interagissent par l’échange de messages en utilisant un moyen<br>
+de communication ou un autre. La mise en œuvre des moyens de communication constitue un<br>
+défi considérable qui a permis à un ordinateur quelconque d'échanger des messages avec<br>
+n'importe quel autre ordinateur dans le réseau. Internet constitue actuellement le système<br>
+distribué le plus large au monde et ceci sur quasiment tous les plans. Des utilisateurs de<br>
+n’importe quelle position dans le monde peuvent utiliser les services offerts par le www<br>
+(world Wilde web), le FTP (file transfert protocole), et autres applications. Les services<br>
+disponibles peuvent être étendus librement et le système peut être agrandi par l'ajout<br>
+d'ordinateurs à n'importe quel moment.</p>
+<h2 id="5-les-systèmes-mobiles">5 Les systèmes mobiles </h2>
+<p>Le progrès dans la miniaturisation et les réseaux sans fil laisse envisager le concept de<br>
+l’espace d’information totalement connecté ou chaque entité dotée certaine fonctionnalité est<br>
+connectée aux autres entités moyennant des dispositifs électroniques et des liaisons sans fil.<br>
+Ces liaisons permettent à chacune d’avoir des informations sur les autres et éventuellement<br>
+invoquer les services qu’elles offrent. Comme la majorité des entités sont dynamiques ont a<br>
+affaire à des systèmes mobiles. Le partage de ressources dans de tels systèmes est une tâche<br>
+complexe qui nécessite une certaine forme d’organisation et des mécanismes et protocoles ad<br>
+hoc.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
